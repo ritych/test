@@ -20,3 +20,14 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 const app = new Vue({
     el: '#app'
 });
+
+$(".btn-refresh").click(function(){
+    alert('1');
+    $.ajax({
+        type: 'GET',
+        url: '/refresh_captcha',
+        success: function(data) {
+            $(".captcha_img").html(data.captcha);
+        }
+    })
+})

@@ -55,6 +55,30 @@
 				<textarea name="description" class="form-control" rows="5" id="description"></textarea>
 			</div>
 		</div>
+		<div class="form-group">
+			<div class="input-group">
+				<span class="input-group-addon">Captcha:</span>
+				<div class="captcha">
+				    <span class="captcha_img">{!! captcha_img() !!}</span>
+					<a type="button" class="btn btn-refresh btn-success">Refresh</a>
+				</div>
+				<input name="captcha" type="text" class="form-control" id="captcha">
+			</div>
+		</div>
 		<button type="submit" class="btn btn-default">Добавить</button>
 	</form> 
+@endsection
+
+@section('scripts')
+	<script>
+        $(".btn-refresh").click(function () {
+            $.ajax({
+                type: 'GET',
+                url: 'refresh_captcha',
+                success: function success(data) {
+                    $(".captcha_img").html(data.captcha);
+                }
+            });
+        });
+	</script>
 @endsection

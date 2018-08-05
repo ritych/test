@@ -13,3 +13,4 @@
 
 Route::get('/', 'HomeController@front');
 Route::post('/submit', 'HomeController@submit');
+Route::get('/refresh_captcha', 'HomeController@refreshCaptcha');

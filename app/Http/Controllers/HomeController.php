@@ -18,8 +18,14 @@ class HomeController extends Controller
             'email' => 'required|email|max:255',
             'url' => 'url|max:255',
             'description' => 'required|max:255',
+            'captcha' => 'required|captcha',
         ]);
         Comment::CreateComment($data);
         return redirect('/')->with('message', 'Отзыв добавлен!');
+    }
+
+    public function refreshCaptcha(){
+        return response()->json(['captcha' => captcha_img()]);
+
     }
 }
