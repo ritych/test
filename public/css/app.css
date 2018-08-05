@@ -8356,3 +8356,11 @@ button.close {
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+.tablesorter-headerAsc {
+  background-image: url(/images/asc.gif?f8a1940c9cf44ab8870319169f3a14ff);
+}
+
+tablesorter-headerDesc {
+  background-image: url(/images/desc.gif?a54846803de3cc786eec3d69f9ac2d38);
+}
+

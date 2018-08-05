@@ -7,8 +7,9 @@
 		<meta name="csrf-token" content="{{ csrf_token() }}">
         <title>Test</title>
 		<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
 		<script src="{{ asset('js/app.js') }}"></script>
-
+		<script src="{{ asset('js/jquery.tablesorter.min.js') }}"></script>
     </head>
     <body>
 		<main>
