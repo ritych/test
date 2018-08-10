@@ -21,7 +21,7 @@ class HomeController extends Controller
             'captcha' => 'required|captcha',
         ]);
         Comment::CreateComment($data);
-        return redirect('/')->with('message', 'Отзыв добавлен!');
+        return redirect('/')->with('message', trans('message_add'));
     }
 
     public function refreshCaptcha(){
