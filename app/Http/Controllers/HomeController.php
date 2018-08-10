@@ -20,8 +20,10 @@ class HomeController extends Controller
             'description' => 'required|max:255',
             'captcha' => 'required|captcha',
         ]);
+        $data['ip'] = $_SERVER['REMOTE_ADDR'];
+        $data['browser'] = $_SERVER['HTTP_USER_AGENT'];
         Comment::CreateComment($data);
-        return redirect('/')->with('message', trans('message_add'));
+        return redirect('/')->with('message', trans('strings.message_add'));
     }
 
     public function refreshCaptcha(){

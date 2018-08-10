@@ -8,6 +8,7 @@ class Comment extends Model
 {
     
     protected $table = 'comment';
+    protected $fillable= ['name', 'email', 'url', 'description', 'ip', 'browser'];
 
     public static function getAllComments()
     {
@@ -16,13 +17,6 @@ class Comment extends Model
 
     public static function CreateComment($data)
     {
-        $comment = new \App\Comment;
-        $comment->name = $data['name'];
-        $comment->email = $data['email'];
-        $comment->url = $data['url'];
-        $comment->description = $data['description'];
-        $comment->ip = $_SERVER['REMOTE_ADDR'];
-        $comment->browser = $_SERVER['HTTP_USER_AGENT'];
-        return $comment->save();
+        return self::create($data);
     }
 }
