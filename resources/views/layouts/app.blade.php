@@ -12,6 +12,15 @@
         <script src="{{ asset('js/jquery.tablesorter.min.js') }}"></script>
     </head>
     <body>
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>{{ trans('strings.project_name') }}</h1>
+                    </div>
+                </div>
+            </div>
+        </header>
         <main>
             <div class="container">
                 <div class="row">
@@ -21,6 +30,15 @@
                 </div>    
             </div>
         </main>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>{{ trans('strings.copyright') }}</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
     @yield('scripts')
 </html>

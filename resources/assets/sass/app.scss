@@ -8,14 +8,76 @@
 // Bootstrap
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+body{
+  border-top:30px solid $black;
+}
+
+header{
+  min-height:$header-height;
+  text-align:center;
+  font:30px Arial;
+  line-height:$header-height;
+}
+
+footer{
+  min-height:$footer-height;
+  text-align:center;
+  font: 16px Arial;
+  line-height:$footer-height;
+  color:$white;
+  margin-top:30px;
+  background:$black;
 }
 
 .tablesorter-headerAsc {
-  background-image: url('asc.gif');
+  background: url(images/asc.gif) no-repeat left center;
 }
-tablesorter-headerDesc {
-  background-image: url('desc.gif');
+.tablesorter-headerDesc {
+  background: url(images/desc.gif) no-repeat left center;
+}
+.tablesorter-headerUnSorted{
+  background: url(images/ascdesc.gif) no-repeat left center;
+}
+
+.sorter-false{
+  background-image:none;
+}
+
+table {
+  border-collapse: collapse;
+  border-left: 3px solid #F79361;
+  border-right: 3px solid #F79361;
+  border-bottom: 3px solid #F79361;
+  font-family: "Lucida Grande", sans-serif;
+  caption {
+    background: #F79361;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3);
+    color: $white;
+    font-family: "Roboto Slab", serif;
+    font-style: normal;
+    font-size: 26px;
+    text-align: center;
+    margin: 0;
+  }
+  td, th {
+    padding: 10px;
+  }
+  th {
+    text-align: left;
+    font-size: 14px;
+  }
+  tr:nth-child(2n) {
+    background: #E5E5E5;
+  }
+  td:last-of-type {
+    text-align: center;
+  }
+}
+
+h2.title{
+  text-align:center;
+  margin:20px 0;
 }

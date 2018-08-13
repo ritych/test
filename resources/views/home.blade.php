@@ -2,6 +2,7 @@
 @section('content')
 	@include('common.errors')
 	<table class="table table-bordered table-hover table-striped" id="main_table">
+		<caption>{{ trans('strings.table_caption') }}</caption>
 		<thead>
 		     <tr class="info text-center">
 		   	     <th class="text-center">{{ trans('strings.table_name') }}</th>
@@ -66,7 +67,7 @@
 			</div>
 		</div>
 		<button type="submit" class="btn btn-default">{{ trans('strings.add') }}</button>
-	</form> 
+	</form>
 @endsection
 
 @section('scripts')
