@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="{{ asset('js/jquery.tablesorter.min.js') }}"></script>
+        <script src="{{ asset('js/bootstrap.js') }}"></script>
     </head>
     <body>
         <header>

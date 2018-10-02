@@ -8372,15 +8372,15 @@ footer {
 }
 
 .tablesorter-headerAsc {
-  background: url(../images/asc.gif?f8a1940c9cf44ab8870319169f3a14ff) no-repeat left center;
+  background: url(/images/asc.gif?f8a1940c9cf44ab8870319169f3a14ff) no-repeat left center;
 }
 
 .tablesorter-headerDesc {
-  background: url(../images/desc.gif?a54846803de3cc786eec3d69f9ac2d38) no-repeat left center;
+  background: url(/images/desc.gif?a54846803de3cc786eec3d69f9ac2d38) no-repeat left center;
 }
 
 .tablesorter-headerUnSorted {
-  background: url(../images/ascdesc.gif?bcfd95e9c8ef2d619639caf1dcee2f57) no-repeat left center;
+  background: url(/images/ascdesc.gif?6e04ff32dde38eccd9952eaebd35605b) no-repeat left center;
 }
 
 .sorter-false {
@@ -8426,6 +8426,14 @@ table tr:nth-child(2n) {
 
 table td:last-of-type {
   text-align: center;
+}
+
+.modal-dialog {
+  top: 170px;
+}
+
+.show {
+  opacity: 1;
 }
 
 h2.title {

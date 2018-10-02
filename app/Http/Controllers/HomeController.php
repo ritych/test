@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Comment;
+use Jenssegers\Agent\Agent;
 
 class HomeController extends Controller
 {
@@ -20,14 +21,14 @@ class HomeController extends Controller
             'description' => 'required|max:255',
             'captcha' => 'required|captcha',
         ]);
-        $data['ip'] = $_SERVER['REMOTE_ADDR'];
-        $data['browser'] = $_SERVER['HTTP_USER_AGENT'];
+        $data['ip'] = $request->ip();
+		$agent = new Agent();
+        $data['browser'] = $agent->browser();
         Comment::CreateComment($data);
         return redirect('/')->with('message', trans('strings.message_add'));
     }
 
     public function refreshCaptcha(){
         return response()->json(['captcha' => captcha_img()]);
-
     }
 }

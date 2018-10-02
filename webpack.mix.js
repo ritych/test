@@ -12,4 +12,5 @@ let mix = require('laravel-mix');
  */
 
 mix.sass('resources/assets/sass/app.scss', 'public/css')
-    .less('node_modules/tablesorter/dist/css/less/bootstrap.less', 'public/css');
+    .less('node_modules/tablesorter/dist/css/less/bootstrap.less', 'public/css')
+    .js('resources/assets/js/bootstrap.js', 'public/js');
